@@ -1,0 +1,23 @@
+<script src="https://apis.google.com/js/platform.js"></script>
+<mat-toolbar color="primary">
+    <span>LiftRentals</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="fill-space"></span>
+    <span>
+    <button class = "menu"mat-button [matMenuTriggerFor]="menu">Menu</button>
+    <mat-menu #menu="matMenu">
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <button mat-menu-item type="button" class="facebookbg" (click)="signInWithFB()">
+        Sign In Facebook
+      </button>
+      <button mat-menu-item type="button" class="btn btn-gplus" (click)="openDialog()"><i class="fa fa-google-plus pr-1"></i> Create Post!</button>
+      <div *ngIf ="!loggedIn">
+        <button mat-menu-item type="button" class="btn btn-gplus" (click)="signOut()"><i class="fa fa-google-plus pr-1"></i> Log Out</button>
+      </div>
+    </mat-menu>
+  </span>
+  </mat-toolbar>
+
+
+

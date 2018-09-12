@@ -1,0 +1,47 @@
+<!-- Simple Card which has various components of the rental craetion
+     ngModel helps with two way binding (import module in app.module.ts)
+    Spinner can be added whenever.
+     //-->
+
+  <mat-card id="modal-1">
+      <form [formGroup]="form" (submit)="onSavePost()">
+      <div class="example-container">
+      <mat-card-title>Create a rental post!</mat-card-title>
+      <!--With Forms we remove directive databinding
+        Used # (directive) and linked it either to ngForm or ngModel
+        used it for ngIf for error statement
+      //-->
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            formControlName="title"
+            placeholder="Post Title"
+            >
+            <!-- <mat-error *ngIf="form.get('title').invalid">Please enter a post title!</mat-error> -->
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea
+            matInput
+            rows="4"
+            formControlName="content"
+            placeholder="include contact information"
+           ></textarea>
+            <!-- <mat-error *ngIf="form.get('content').invalid">Please enter post content!</mat-error> -->
+        </mat-form-field>
+      <div>
+          <button class ="spacing" mat-stroked-button type="button" (click)="filePicker.click()">Pick Image</button>
+          <input class ="hidebutton" type="file" #filePicker (change)="onImagePicked($event)">
+        </div>
+    </div>
+    <div class = "img-prev" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid">
+      <img [src]="imagePreview" [alt]="form.value.title">
+    </div>
+    <button
+      class="fix-button"
+      mat-raised-button
+      color="primary"
+      type="submit">Submit</button>
+    </form>
+  </mat-card>

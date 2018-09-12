@@ -1,0 +1,19 @@
+hr.style12 {
+	height: 6px;
+	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+    border: 0;
+}
+.example-card {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.image-size{
+  width: 100%;
+  height: 300px;
+}

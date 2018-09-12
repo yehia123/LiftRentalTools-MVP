@@ -1,0 +1,43 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.mat-card{
+  width: 80%;
+  margin: auto;
+}
+
+.example-container-g{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.example-container-g mat-form-field{
+  margin-top: 1rem;
+}
+
+.fix-button{
+  display: grid;
+  grid-template-columns: 200px;
+}
+
+.hidebutton{
+  visibility: hidden;
+}
+
+.spacing{
+  margin-bottom: 5px;
+}
+
+.img-prev{
+  height: 5rem;
+  margin: 1rem 0;
+}
+.img-prev img{
+  height: 100%;
+}

@@ -1,0 +1,20 @@
+.fill-space{
+  flex: 1 1 auto;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+
+:host {
+  height: 100%;
+}
+
+.photo {
+  width: 100px;
+}
+
+.card {
+  width: 20rem;
+  margin: 0 auto;
+}
+
