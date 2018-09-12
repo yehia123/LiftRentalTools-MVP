@@ -1,5 +1,4 @@
-import { Component, Inject, Injectable, OnInit } from '@angular/core';
-import {MatDialogRef, MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
 
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import { PostService } from '../posts.service';
@@ -23,9 +22,7 @@ import { SocialUser } from 'angularx-social-login';
 export class CreatePostComponent implements OnInit {
   enteredTitle = '';
   enteredDesc = '';
-  private mode = 'create';
-  private postId: string;
-  isLoading = false;
+
   imagePreview: string;
   private post: Post;
 
@@ -70,16 +67,16 @@ export class CreatePostComponent implements OnInit {
    };
    reader.readAsDataURL(file);
   }
+  /**  */
   ngOnInit() {
     this.authService.authState.subscribe((user) => {
       this.user = user;
       this.loggedIn = (user != null);
     });
-        this.mode = '';
-        this.form.patchValue({
-          fbImagePath: this.user.photoUrl,
-          fbName: this.user.name
-        });
+    this.form.patchValue({
+      fbImagePath: this.user.photoUrl,
+      fbName: this.user.name
+    });
   }
   /**
    * Add error handling
