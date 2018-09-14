@@ -1,6 +1,8 @@
 # LiftRentals
 MVP in production! Go now on https://www.liftrentaltools.com to check it out.
 
+## CURRENTLY UNDER CORS ERROR. Priority BUG #1
+
 Currently working on many bugs that were caused after deployment such as: 
     - Error when submitting a successful form 
     - Search Engine component
