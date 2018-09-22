@@ -30,7 +30,7 @@ export class PostService {
   getPosts() {
     this.http
     .get<{message: string, posts: any}>(
-      'http://localhost:3000/api/posts'
+      'https://liftrentaltools.com:3000/api/posts'
       )
       .pipe(map((postData) => {
         return postData.posts.map(post => {
@@ -63,7 +63,7 @@ export class PostService {
       _id: string,
       title: string,
       content: string}>(
-      'http://localhost:3000/api/posts/');
+      'https://liftrentaltools.com:3000/api/posts');
   }
   /** Async posts if succesful from server side by addingt it
    * in subscribe method
@@ -79,7 +79,7 @@ export class PostService {
     postData.append('fbName', fbName);
     this.http
       .post<{message: string, post: Post}>(
-        'http://localhost:3000/api/posts',
+        'https://liftrentaltools.com:3000/api/posts',
         postData
       )
       .subscribe((responseData) => {
@@ -102,7 +102,7 @@ export class PostService {
    */
   updatePost(id: string, title: string, content: string) {
     const post: Post = { id: id, title: title, content: content, imagePath: null, fbImagePath: null, fbName: null };
-    this.http.put('http://localhost:3000/api/posts/' + id, post)
+    this.http.put('https://liftrentaltools.com:3000/api/posts' + id, post)
       .subscribe(response => {
         const updatedPosts = [...this.posts];
         const oldPostIndex = updatedPosts.findIndex(p => p.id === post.id);
@@ -118,7 +118,7 @@ export class PostService {
    * to DO! authroization
   */
   deletePost(postId: string) {
-    this.http.delete('http://localhost:3000/api/posts/' + postId)
+    this.http.delete('https://liftrentaltools.com:3000/api/posts' + postId)
       .subscribe(() => {
         const updatedPosts = this.posts.filter(post => post.id !== postId);
         this.posts = updatedPosts;
