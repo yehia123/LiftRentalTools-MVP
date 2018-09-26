@@ -1,4 +1,6 @@
 #
+# Had to rebuild the application since the server cloud has issues with access through ssh
+# Debugged the problem thinking it was ssh problem but it was because the AIM software
 # Build new docker image:
 #
 #   docker build -t backend:1 .
