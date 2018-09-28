@@ -7,7 +7,7 @@
 #
 # Tag image for AWS ECR:
 #
-#    docker tag backend:1 008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools:latest
+#    docker tag integratedend:1 008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools-repo:latest
 #
 # Upload ("push") newly built docker image to AWS ECR:
 #
