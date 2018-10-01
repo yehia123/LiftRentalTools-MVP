@@ -14,7 +14,7 @@ export class PostService {
   private posts: Post [] = [];
   private postsUpdated = new Subject<Post[]>();
   /** get http client */
-  constructor(
+  public constructor(
     private http: HttpClient,
     private router: Router
   ) {}
@@ -27,10 +27,10 @@ export class PostService {
 * Pipe() is an operator that maps
 * takes the data posted maps it into the new array with specified content with map() method
 */
-  getPosts() {
+  public getPosts() {
     this.http
     .get<{message: string, posts: any}>(
-      'https://liftrentaltools.com:3000/api/posts'
+      'https://liftrentaltools.com:444/api/posts'
       )
       .pipe(map((postData) => {
         return postData.posts.map(post => {
@@ -63,7 +63,7 @@ export class PostService {
       _id: string,
       title: string,
       content: string}>(
-      'https://liftrentaltools.com:3000/api/posts');
+      'https://liftrentaltools.com:444/api/posts');
   }
   /** Async posts if succesful from server side by addingt it
    * in subscribe method
@@ -79,7 +79,7 @@ export class PostService {
     postData.append('fbName', fbName);
     this.http
       .post<{message: string, post: Post}>(
-        'https://liftrentaltools.com:3000/api/posts',
+        'https://liftrentaltools.com:444/api/posts',
         postData
       )
       .subscribe((responseData) => {
@@ -102,7 +102,7 @@ export class PostService {
    */
   updatePost(id: string, title: string, content: string) {
     const post: Post = { id: id, title: title, content: content, imagePath: null, fbImagePath: null, fbName: null };
-    this.http.put('https://liftrentaltools.com:3000/api/posts' + id, post)
+    this.http.put('https://liftrentaltools.com:444/api/posts' + id, post)
       .subscribe(response => {
         const updatedPosts = [...this.posts];
         const oldPostIndex = updatedPosts.findIndex(p => p.id === post.id);

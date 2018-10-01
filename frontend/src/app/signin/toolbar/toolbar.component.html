@@ -12,7 +12,7 @@
         Sign In Facebook
       </button>
       <button mat-menu-item type="button" class="btn btn-gplus" (click)="openDialog()"><i class="fa fa-google-plus pr-1"></i> Create Post!</button>
-      <div *ngIf ="!loggedIn">
+      <div *ngIf ="loggedIn">
         <button mat-menu-item type="button" class="btn btn-gplus" (click)="signOut()"><i class="fa fa-google-plus pr-1"></i> Log Out</button>
       </div>
     </mat-menu>

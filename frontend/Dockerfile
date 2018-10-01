@@ -21,30 +21,30 @@
 #
 
 # Create img from official node 6 image from dockerhub
-FROM node:10
-
-# Create a directory will the app will places
-RUN mkdir -p /src/app
+FROM node:10 as builder
 
 # Change directory so that our command run inside the new directory
-WORKDIR /src/app
-
-# Copy dependency definitions
-#COPY package.json /app
+WORKDIR /app
 
 # the code needed to run the app
-COPY . /src/app
+COPY . .
 
 # Install dependecies
-RUN npm install
+RUN npm install && \
+    npm run build
 
+#
+# Use a new docker image, copying newly created dist dir
+#
+FROM nginx:alpine
 
+RUN rm -rf /usr/share/nginx/html/*
 
-ENTRYPOINT ["npm", "start"]
+COPY --from=builder /app/dist/lift /usr/share/nginx/html
 
+EXPOSE 80
 
-# Export the port the app runs in
-EXPOSE 4200
+CMD ["nginx", "-g", "daemon off;"]
 
 
 

@@ -11,11 +11,11 @@
 #
 # Upload ("push") newly built docker image to AWS ECR:
 #
-#   008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools:latest
+#   008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools-repo:latest
 #
 # Run docker container:
 #
-#   docker run -it -p 3000:3000 --restart=always 008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools:latest
+#   docker run -it -p 3000:3000 --restart=always 008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools-repo:latest
 #
 FROM node:10
 

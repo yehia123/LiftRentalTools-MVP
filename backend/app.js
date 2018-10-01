@@ -24,7 +24,7 @@ mongoose.connect("mongodb+srv://jb:QyedOIEb9mEyHxYm@cluster0-ykbqi.mongodb.net/t
 */
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use("/", express.static(path.join(__dirname, "static")));
+app.use("/images", express.static(path.join(__dirname, "images")));
 
 /** For all incoming requests
  * you add the header and what files to target
