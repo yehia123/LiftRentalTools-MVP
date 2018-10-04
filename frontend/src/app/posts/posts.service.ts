@@ -30,7 +30,7 @@ export class PostService {
   public getPosts() {
     this.http
     .get<{message: string, posts: any}>(
-      'https://liftrentaltools.com:444/api/posts'
+      'https://liftrentaltools.com:445/api/posts'
       )
       .pipe(map((postData) => {
         return postData.posts.map(post => {
@@ -63,7 +63,7 @@ export class PostService {
       _id: string,
       title: string,
       content: string}>(
-      'https://liftrentaltools.com:444/api/posts');
+      'https://liftrentaltools.com:445/api/posts');
   }
   /** Async posts if succesful from server side by addingt it
    * in subscribe method
@@ -79,7 +79,7 @@ export class PostService {
     postData.append('fbName', fbName);
     this.http
       .post<{message: string, post: Post}>(
-        'https://liftrentaltools.com:444/api/posts',
+        'https://liftrentaltools.com:445/api/posts',
         postData
       )
       .subscribe((responseData) => {
@@ -99,10 +99,10 @@ export class PostService {
   /**
    * service to updat the post
    * EDIT BUTTON DOES NOT WORK YET... EDITS TO BE MADE
-   */
+
   updatePost(id: string, title: string, content: string) {
     const post: Post = { id: id, title: title, content: content, imagePath: null, fbImagePath: null, fbName: null };
-    this.http.put('https://liftrentaltools.com:444/api/posts' + id, post)
+    this.http.put('https://liftrentaltools.com:445/api/posts' + id, post)
       .subscribe(response => {
         const updatedPosts = [...this.posts];
         const oldPostIndex = updatedPosts.findIndex(p => p.id === post.id);
@@ -112,13 +112,14 @@ export class PostService {
         this.router.navigate(['/']);
       });
  }
+   */
   /**
    * sends request with post ID to delete whichever post chosen
    * makes a copy of the posts list after deleting post with correct id
    * to DO! authroization
   */
   deletePost(postId: string) {
-    this.http.delete('https://liftrentaltools.com:3000/api/posts' + postId)
+    this.http.delete('https://liftrentaltools.com:445/api/posts' + postId)
       .subscribe(() => {
         const updatedPosts = this.posts.filter(post => post.id !== postId);
         this.posts = updatedPosts;

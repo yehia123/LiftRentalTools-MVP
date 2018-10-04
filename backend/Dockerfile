@@ -13,7 +13,7 @@
 #
 #   008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools-repo:latest
 #
-# Run docker container:
+# Run docker container: docker run -it -p 445:445 --restart=always
 #
 #   docker run -it -p 3000:3000 --restart=always 008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools-repo:latest
 #
