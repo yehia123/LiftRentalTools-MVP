@@ -9,11 +9,11 @@
 #
 # Tag image for AWS ECR:
 #
-#    docker tag frontend:1 008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools:latest
+#    docker tag frontend:1 008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools-frontend:latest
 #
 # Upload ("push") newly built docker image to AWS ECR:
 #
-#   008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools:latest
+#   008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools-frontend:latest
 #
 # Run docker container:
 #

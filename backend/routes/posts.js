@@ -46,7 +46,8 @@ const storage = multer.diskStorage({
  * when doing so
  */
 router.post("", multer({storage: storage}).single("image"), (req, res, next) => {
-  const url = req.protocol + '://' + req.get("host");
+  //const url = req.protocol + '://' + req.get("host");
+  const url = 'https://liftrentaltools.com';
   const post = new Post({
     title: req.body.title,
     content: req.body.content,
