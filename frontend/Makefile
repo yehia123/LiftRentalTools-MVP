@@ -1,7 +1,11 @@
 VERSION	?= $(shell git rev-parse HEAD)
 IMAGE	?= 008464082942.dkr.ecr.us-west-1.amazonaws.com/liftrentaltools-frontend:$(VERSION)
 
-all: build push deploy
+all: login build push deploy
+
+login:
+
+    $(aws ecr get-login --no-include-email)
 
 build:
 
