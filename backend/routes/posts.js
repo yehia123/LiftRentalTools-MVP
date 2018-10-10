@@ -31,7 +31,7 @@ const storage = multer.diskStorage({
     const name = file.originalname.toLowerCase().split(' ').join('-');
     console.log(file);
     const ext = MIME_TYPE_MAP[file.mimetype];
-    cb(null, name + ext);
+    cb(null, name + '.' + ext);
   }
 });
 
