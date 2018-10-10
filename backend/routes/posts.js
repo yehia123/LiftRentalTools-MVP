@@ -29,6 +29,7 @@ const storage = multer.diskStorage({
   },
   filename: (req, file, cb) => {
     const name = file.originalname.toLowerCase().split(' ').join('-');
+    console.log(name);
     const ext = MIME_TYPE_MAP[file.mimetype];
     cb(null, name + '-' + Date.now() + '.' + ext);
   }
@@ -48,6 +49,7 @@ const storage = multer.diskStorage({
 router.post("", multer({storage: storage}).single("image"), (req, res, next) => {
   //const url = req.protocol + '://' + req.get("host");
   const url = 'https://liftrentaltools.com';
+  console.log(req.file.filename);
   const post = new Post({
     title: req.body.title,
     content: req.body.content,
