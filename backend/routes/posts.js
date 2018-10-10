@@ -25,13 +25,13 @@ const storage = multer.diskStorage({
     if(isValid) {
       error = null;
     }
-    cb(error, "backend/images");
+    cb(error, "images");
   },
   filename: (req, file, cb) => {
     const name = file.originalname.toLowerCase().split(' ').join('-');
     console.log(file);
     const ext = MIME_TYPE_MAP[file.mimetype];
-    cb(null, name + '.' + ext);
+    cb(null, name + '-' + Date.now() + '.' + ext);
   }
 });
 

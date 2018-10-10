@@ -18,4 +18,4 @@ push:
 deploy:
 
 	ssh -i /Users/yehiaqtaish/Downloads/newpair.pem centos@54.176.247.200 'sudo docker rm -f web || true'
-	ssh -i /Users/yehiaqtaish/Downloads/newpair.pem centos@54.176.247.200 'sudo docker run -d -p 3000:3000 --restart=always --name=web $(IMAGE)'
+	ssh -i /Users/yehiaqtaish/Downloads/newpair.pem centos@54.176.247.200 'sudo docker run -v images:/app/images -d -p 3000:3000 --restart=always --name=web $(IMAGE)'
