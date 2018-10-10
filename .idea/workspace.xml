@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="671f0db9-ae51-4621-8ad6-4eacf0d53957" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Makefile" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,7 +32,7 @@
           <entry key="Makefile" value="205" />
           <entry key="dockerignore" value="17" />
           <entry key="html" value="40" />
-          <entry key="js" value="103" />
+          <entry key="js" value="104" />
           <entry key="json" value="1" />
           <entry key="ts" value="20" />
         </counts>
@@ -44,7 +42,7 @@
           <entry key="Dockerfile" value="39" />
           <entry key="HTML" value="40" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="103" />
+          <entry key="JavaScript" value="104" />
           <entry key="PLAIN_TEXT" value="222" />
           <entry key="TypeScript" value="20" />
         </counts>
@@ -130,8 +128,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/routes/posts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+            <state relative-caret-position="121">
+              <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -346,12 +344,12 @@
       <workItem from="1538413931210" duration="13598000" />
       <workItem from="1538758971934" duration="5162000" />
       <workItem from="1539017386300" duration="5311000" />
-      <workItem from="1539145324668" duration="1698000" />
+      <workItem from="1539145324668" duration="1912000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25822000" />
+    <option name="totallyTimeSpent" value="26036000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -587,8 +585,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/routes/posts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        <state relative-caret-position="121">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
         </state>
       </provider>
     </entry>
